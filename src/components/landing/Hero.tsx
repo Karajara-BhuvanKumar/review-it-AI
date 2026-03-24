@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // Import Link
 
 const Hero = () => (
   <section id="home" className="hero-gradient relative overflow-hidden pt-32 pb-20 lg:pt-44 lg:pb-32">
@@ -21,9 +22,11 @@ const Hero = () => (
             Proposals, Thesis, and CVs.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button variant="hero" size="xl">
-              Start Reviewing <ArrowRight className="w-5 h-5" />
-            </Button>
+            <Link to="/upload"> {/* Wrap the button with Link */}
+              <Button variant="hero" size="xl">
+                Start Reviewing <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
             <Button variant="hero-outline" size="xl">
               <Play className="w-4 h-4" /> Learn More
             </Button>
